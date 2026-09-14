@@ -280,11 +280,57 @@
             font-size: 24px;
         }
 
-        /* CTA Section (Agregado en Commit 7) */
+        /* CTA Section (Desde Commit 7) */
         .cta-section {
             padding: 80px 0;
             text-align: center;
             background-color: var(--light-bg);
+        }
+
+        /* Footer (Agregado en Commit 8) */
+        footer {
+            background-color: #06182c;
+            color: #a0aec0;
+            padding: 50px 0 20px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .footer-links h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-orange);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
     </style>
 </head>
@@ -388,7 +434,7 @@
         </div>
     </section>
 
-    <!-- Call to Action (Agregado en Commit 7) -->
+    <!-- Call to Action (Desde Commit 7) -->
     <section class="cta-section">
         <div class="container">
             <h2 class="section-title">¿Listo para modernizar tu cadena de suministro?</h2>
@@ -397,6 +443,38 @@
         </div>
     </section>
 </main>
+
+<!-- Footer (Agregado en Commit 8) -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">AI-ToDu</div>
+                <p>Desarrollado por IA-INNOVATION. Democratizando el acceso a la tecnología empresarial para las MYPES latinoamericanas.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Producto</h4>
+                <ul>
+                    <li><a href="#">Características</a></li>
+                    <li><a href="#">Precios y Planes</a></li>
+                    <li><a href="#">Guía de Usuario</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal & Ética</h4>
+                <ul>
+                    <!-- Link Obligatorio de Términos y Condiciones (Pág. 30 de la Rúbrica) -->
+                    <li><a href="/terminos-condiciones" aria-label="Leer nuestros Términos y Condiciones">Términos y Condiciones</a></li>
+                    <li><a href="/privacidad" aria-label="Leer Política de Privacidad">Política de Privacidad</a></li>
+                    <li><a href="/etica" aria-label="Código de Ética Profesional">Código de Ética</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 IA-INNOVATION (Proyecto Académico). Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
