@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO & Meta Tags requeridos por la rúbrica -->
     <title>AI-ToDu | Gestión Logística Inteligente para MYPES</title>
-    <meta name="description" content="AI-ToDu centraliza inventario, facturación y ventas para PYMES y MYPES.">
-    <meta name="keywords" content="gestión de inventario, facturación electrónica MYPES, AI-ToDu">
-    <meta name="author" content="IA-INNOVATION">
+    <meta name="description" content="AI-ToDu centraliza inventario, facturación y ventas para PYMES y MYPES. Simplifica tu cadena de suministro con nuestra plataforma B2B SaaS.">
+    <meta name="keywords" content="gestión de inventario, facturación electrónica MYPES, ERP para restaurantes, software logística Perú, AI-ToDu">
+    <meta name="author" content="IA-INNOVATION (Salazar Marquina, Kevin et al.)">
+
+    <!-- Fuentes Tipográficas Formales -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos Unificados -->
     <style>
-        /* CSS Variables: Tono B2B Corporativo */
+        /* CSS Variables: Tono B2B Corporativo (Desde Commit 2) */
         :root {
             --primary-blue: #0A2540;
             --accent-orange: #FF6A00;
@@ -22,21 +27,165 @@
             --white: #FFFFFF;
         }
 
-        /* Reseteo y Estilos Base */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', sans-serif; color: var(--text-dark); background-color: var(--white); line-height: 1.6; }
-        h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: var(--primary-blue); }
-        a { text-decoration: none; color: inherit; }
-        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        /* Reseteo y Estilos Base (Desde Commit 2) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        /* Botones Globales */
-        .btn { display: inline-block; padding: 12px 24px; border-radius: 6px; font-weight: 500; transition: all 0.3s ease; cursor: pointer; border: none; text-align: center; }
-        .btn-primary { background-color: var(--accent-orange); color: var(--white); box-shadow: 0 4px 6px rgba(255, 106, 0, 0.2); }
-        .btn-primary:hover { background-color: #e65c00; transform: translateY(-2px); }
-        .btn-outline { border: 2px solid var(--primary-blue); color: var(--primary-blue); background: transparent; }
-        .btn-outline:hover { background-color: var(--primary-blue); color: var(--white); }
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-blue);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Botones Globales (Desde Commit 2) */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-orange);
+            color: var(--white);
+            box-shadow: 0 4px 6px rgba(255, 106, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #e65c00;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* Navbar (Agregado en Commit 3) */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-orange);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-orange);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Hamburguesa para Móvil (Agregado en Commit 3) */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary-blue);
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
+
+<!-- Header / Navbar (Agregado en Commit 3) -->
+<header>
+    <div class="container">
+        <nav aria-label="Navegación principal">
+            <a href="#" class="logo" aria-label="Volver al inicio de AI-ToDu">
+                <!-- Icono SVG simulado -->
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="3" width="18" height="18" rx="4" fill="#0A2540"/>
+                    <path d="M8 12L11 15L16 9" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                AI-<span>ToDu</span>
+            </a>
+
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#beneficios" role="menuitem">Beneficios</a></li>
+                <li role="none"><a href="#soluciones" role="menuitem">Soluciones</a></li>
+                <li role="none"><a href="#nosotros" role="menuitem">Nosotros</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#" class="btn btn-outline" aria-label="Iniciar Sesión en el sistema">Iniciar Sesión</a>
+                <a href="#" class="btn btn-primary" aria-label="Registrarse gratis">Prueba Gratis</a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Abrir menú móvil" aria-expanded="false" onclick="toggleMenu()">
+                ☰
+            </button>
+        </nav>
+    </div>
+</header>
+
 </body>
 </html>
