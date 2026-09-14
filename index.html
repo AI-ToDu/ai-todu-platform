@@ -92,7 +92,7 @@
             color: var(--white);
         }
 
-        /* Navbar (Agregado en Commit 3) */
+        /* Navbar (Desde Commit 3) */
         header {
             background-color: var(--white);
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -143,7 +143,7 @@
             gap: 15px;
         }
 
-        /* Hamburguesa para Móvil (Agregado en Commit 3) */
+        /* Hamburguesa para Móvil (Desde Commit 3) */
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -152,16 +152,57 @@
             color: var(--primary-blue);
             cursor: pointer;
         }
+
+        /* Hero Section (Agregado en Commit 4) */
+        .hero {
+            background-color: var(--light-bg);
+            padding: 100px 0;
+            border-bottom: 1px solid #e6ebf1;
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .hero-img {
+            flex: 1;
+            text-align: right;
+        }
+
+        .hero-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(10, 37, 64, 0.1);
+        }
     </style>
 </head>
 <body>
 
-<!-- Header / Navbar (Agregado en Commit 3) -->
+<!-- Header / Navbar (Desde Commit 3) -->
 <header>
     <div class="container">
         <nav aria-label="Navegación principal">
             <a href="#" class="logo" aria-label="Volver al inicio de AI-ToDu">
-                <!-- Icono SVG simulado -->
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="3" y="3" width="18" height="18" rx="4" fill="#0A2540"/>
                     <path d="M8 12L11 15L16 9" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -186,6 +227,27 @@
         </nav>
     </div>
 </header>
+
+<!-- Main Content (Agregado en Commit 4) -->
+<main>
+    <!-- Hero Section (Agregado en Commit 4) -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>El sistema nervioso central de tu logística.</h1>
+                <p>Centraliza tu inventario, ventas, despacho y facturación en una sola plataforma SaaS. Diseñada para operarios, construida para MYPES que buscan crecer sin complicaciones.</p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="#soluciones" class="btn btn-primary" aria-label="Ver cómo funciona AI-ToDu">Descubre Cómo</a>
+                    <a href="#" class="btn btn-outline" aria-label="Agendar una demostración">Agendar Demo</a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <!-- Usamos un placeholder ilustrativo del Dashboard -->
+                <img src="https://placehold.co/600x400/0A2540/FFFFFF?text=Dashboard+AI-ToDu+Preview" alt="Captura de pantalla del Dashboard de Inventario y Ventas de AI-ToDu" loading="lazy">
+            </div>
+        </div>
+    </section>
+</main>
 
 </body>
 </html>
