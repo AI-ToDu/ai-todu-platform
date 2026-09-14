@@ -1,0 +1,6 @@
+#Dependencies
+node_modules/
+dist/
+.idea/
+.Ds_Store
+Thumbs.db
