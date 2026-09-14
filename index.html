@@ -287,7 +287,7 @@
             background-color: var(--light-bg);
         }
 
-        /* Footer (Agregado en Commit 8) */
+        /* Footer (Desde Commit 8) */
         footer {
             background-color: #06182c;
             color: #a0aec0;
@@ -332,11 +332,44 @@
             padding-top: 20px;
             border-top: 1px solid rgba(255,255,255,0.1);
         }
+
+        /* Responsive Design (Agregado en Commit 9) */
+        @media (max-width: 768px) {
+            .nav-links, .nav-actions {
+                display: none; /* Se ocultan en móvil para este ejemplo estático */
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-img {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .segments-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
 
-<!-- Header / Navbar (Desde Commit 3) -->
+<!-- Header / Navbar -->
 <header>
     <div class="container">
         <nav aria-label="Navegación principal">
@@ -367,7 +400,7 @@
 </header>
 
 <main>
-    <!-- Hero Section (Desde Commit 4) -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-text">
@@ -384,7 +417,7 @@
         </div>
     </section>
 
-    <!-- Features / Value Proposition (Desde Commit 5) -->
+    <!-- Features / Value Proposition -->
     <section id="beneficios" class="features container">
         <h2 class="section-title">Innovación Adaptable para tu Negocio</h2>
         <p class="section-subtitle">Olvida los cuadernos perdidos y los Excel rotos. AI-ToDu democratiza la tecnología empresarial.</p>
@@ -413,7 +446,7 @@
         </div>
     </section>
 
-    <!-- Segments Section (Desde Commit 6) -->
+    <!-- Segments Section -->
     <section id="soluciones" class="segments">
         <div class="container">
             <h2 class="section-title">Hecho para quienes mueven la economía</h2>
@@ -434,7 +467,7 @@
         </div>
     </section>
 
-    <!-- Call to Action (Desde Commit 7) -->
+    <!-- Call to Action -->
     <section class="cta-section">
         <div class="container">
             <h2 class="section-title">¿Listo para modernizar tu cadena de suministro?</h2>
@@ -444,7 +477,7 @@
     </section>
 </main>
 
-<!-- Footer (Agregado en Commit 8) -->
+<!-- Footer -->
 <footer>
     <div class="container">
         <div class="footer-grid">
@@ -463,7 +496,6 @@
             <div class="footer-links">
                 <h4>Legal & Ética</h4>
                 <ul>
-                    <!-- Link Obligatorio de Términos y Condiciones (Pág. 30 de la Rúbrica) -->
                     <li><a href="/terminos-condiciones" aria-label="Leer nuestros Términos y Condiciones">Términos y Condiciones</a></li>
                     <li><a href="/privacidad" aria-label="Leer Política de Privacidad">Política de Privacidad</a></li>
                     <li><a href="/etica" aria-label="Código de Ética Profesional">Código de Ética</a></li>
@@ -476,5 +508,17 @@
     </div>
 </footer>
 
+<!-- Script Unificado (Agregado en Commit 9) -->
+<script>
+    function toggleMenu() {
+        // Lógica simple para menú móvil
+        const btn = document.querySelector('.mobile-menu-btn');
+        const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+        btn.setAttribute('aria-expanded', !expanded);
+
+        // Usamos alert porque para esta etapa es un mock funcional
+        alert('Menú responsivo en desarrollo para la entrega final.');
+    }
+</script>
 </body>
 </html>
