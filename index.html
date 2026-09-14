@@ -16,7 +16,7 @@
 
     <!-- Estilos Unificados -->
     <style>
-        /* CSS Variables: Tono B2B Corporativo (Desde Commit 2) */
+        /* CSS Variables: Tono B2B Corporativo */
         :root {
             --primary-blue: #0A2540;
             --accent-orange: #FF6A00;
@@ -27,7 +27,7 @@
             --white: #FFFFFF;
         }
 
-        /* Reseteo y Estilos Base (Desde Commit 2) */
+        /* Reseteo y Estilos Base */
         * {
             margin: 0;
             padding: 0;
@@ -58,7 +58,7 @@
             padding: 0 20px;
         }
 
-        /* Botones Globales (Desde Commit 2) */
+        /* Botones Globales */
         .btn {
             display: inline-block;
             padding: 12px 24px;
@@ -92,7 +92,7 @@
             color: var(--white);
         }
 
-        /* Navbar (Desde Commit 3) */
+        /* Navbar */
         header {
             background-color: var(--white);
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -143,7 +143,7 @@
             gap: 15px;
         }
 
-        /* Hamburguesa para Móvil (Desde Commit 3) */
+        /* Hamburguesa para Móvil */
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -153,7 +153,7 @@
             cursor: pointer;
         }
 
-        /* Hero Section (Desde Commit 4) */
+        /* Hero Section */
         .hero {
             background-color: var(--light-bg);
             padding: 100px 0;
@@ -195,7 +195,7 @@
             box-shadow: 0 15px 35px rgba(10, 37, 64, 0.1);
         }
 
-        /* Features Section (Desde Commit 5) */
+        /* Features Section */
         .features {
             padding: 80px 0;
             text-align: center;
@@ -249,7 +249,7 @@
             font-size: 15px;
         }
 
-        /* Segments Section (Desde Commit 6) */
+        /* Segments Section */
         .segments {
             background-color: var(--primary-blue);
             color: var(--white);
@@ -280,14 +280,14 @@
             font-size: 24px;
         }
 
-        /* CTA Section (Desde Commit 7) */
+        /* CTA Section */
         .cta-section {
             padding: 80px 0;
             text-align: center;
             background-color: var(--light-bg);
         }
 
-        /* Footer (Desde Commit 8) */
+        /* Footer */
         footer {
             background-color: #06182c;
             color: #a0aec0;
@@ -333,10 +333,10 @@
             border-top: 1px solid rgba(255,255,255,0.1);
         }
 
-        /* Responsive Design (Agregado en Commit 9) */
+        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links, .nav-actions {
-                display: none; /* Se ocultan en móvil para este ejemplo estático */
+                display: none;
             }
 
             .mobile-menu-btn {
@@ -508,15 +508,13 @@
     </div>
 </footer>
 
-<!-- Script Unificado (Agregado en Commit 9) -->
+<!-- Script Unificado -->
 <script>
     function toggleMenu() {
-        // Lógica simple para menú móvil
         const btn = document.querySelector('.mobile-menu-btn');
         const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
         btn.setAttribute('aria-expanded', !expanded);
 
-        // Usamos alert porque para esta etapa es un mock funcional
         alert('Menú responsivo en desarrollo para la entrega final.');
     }
 </script>
