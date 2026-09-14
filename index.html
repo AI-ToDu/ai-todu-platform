@@ -195,7 +195,7 @@
             box-shadow: 0 15px 35px rgba(10, 37, 64, 0.1);
         }
 
-        /* Features Section (Agregado en Commit 5) */
+        /* Features Section (Desde Commit 5) */
         .features {
             padding: 80px 0;
             text-align: center;
@@ -247,6 +247,37 @@
         .feature-card p {
             color: var(--text-muted);
             font-size: 15px;
+        }
+
+        /* Segments Section (Agregado en Commit 6) */
+        .segments {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 80px 0;
+        }
+
+        .segments .section-title, .segments .section-subtitle {
+            color: var(--white);
+            text-align: center;
+        }
+
+        .segments-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .segment-card {
+            background-color: var(--secondary-blue);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .segment-card h3 {
+            color: var(--accent-orange);
+            margin-bottom: 15px;
+            font-size: 24px;
         }
     </style>
 </head>
@@ -300,7 +331,7 @@
         </div>
     </section>
 
-    <!-- Features / Value Proposition (Agregado en Commit 5) -->
+    <!-- Features / Value Proposition (Desde Commit 5) -->
     <section id="beneficios" class="features container">
         <h2 class="section-title">Innovación Adaptable para tu Negocio</h2>
         <p class="section-subtitle">Olvida los cuadernos perdidos y los Excel rotos. AI-ToDu democratiza la tecnología empresarial.</p>
@@ -325,6 +356,27 @@
                 <span class="feature-icon" aria-hidden="true">🔒</span>
                 <h3>Seguridad y Roles</h3>
                 <p>Plataforma robusta con permisos granulares (Administrador, Almacenero, Vendedor). Protege tu información financiera y delega con confianza.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Segments Section (Agregado en Commit 6) -->
+    <section id="soluciones" class="segments">
+        <div class="container">
+            <h2 class="section-title">Hecho para quienes mueven la economía</h2>
+            <p class="section-subtitle">Adaptamos flujos complejos en interfaces simples para operarios sin experiencia técnica.</p>
+
+            <div class="segments-grid">
+                <div class="segment-card">
+                    <h3>Para Dueños y Gerentes</h3>
+                    <p><strong>El Dolor:</strong> Pérdida de dinero por descontrol de mercadería y falta de visibilidad del estado real del negocio.</p>
+                    <p><strong>La Solución:</strong> Un Dashboard directivo accesible desde tu celular. Visualiza reportes de ingresos, rentabilidad y alertas de faltantes mientras tomas decisiones estratégicas desde cualquier lugar.</p>
+                </div>
+                <div class="segment-card">
+                    <h3>Para Operarios de Almacén</h3>
+                    <p><strong>El Dolor:</strong> Estrés por registro doble en papel y sistemas difíciles de aprender que retrasan el despacho.</p>
+                    <p><strong>La Solución:</strong> Interfaces rápidas y botoneras grandes. Búsqueda ágil de productos, registro de mermas en 3 clics y validaciones automáticas que previenen errores humanos.</p>
+                </div>
             </div>
         </div>
     </section>
