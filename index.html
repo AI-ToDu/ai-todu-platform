@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO & Meta Tags requeridos por la rúbrica -->
+    <title>AI-ToDu | Gestión Logística Inteligente para MYPES</title>
+    <meta name="description" content="AI-ToDu centraliza inventario, facturación y ventas para PYMES y MYPES. Simplifica tu cadena de suministro con nuestra plataforma B2B SaaS.">
+    <meta name="keywords" content="gestión de inventario, facturación electrónica MYPES, ERP para restaurantes, software logística Perú, AI-ToDu">
+    <meta name="author" content="IA-INNOVATION (Salazar Marquina, Kevin et al.)">
+
+    <!-- Fuentes Tipográficas Formales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos Unificados -->
+    <style>
+        /* CSS Variables: Tono B2B Corporativo */
+        :root {
+            --primary-blue: #0A2540;
+            --accent-orange: #FF6A00;
+            --secondary-blue: #204066;
+            --light-bg: #F6F9FC;
+            --text-dark: #32325D;
+            --text-muted: #6B7C93;
+            --white: #FFFFFF;
+        }
+
+        /* Reseteo y Estilos Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-blue);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Botones Globales */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-orange);
+            color: var(--white);
+            box-shadow: 0 4px 6px rgba(255, 106, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #e65c00;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* Navbar */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-orange);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-orange);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Hamburguesa para Móvil */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary-blue);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--light-bg);
+            padding: 100px 0;
+            border-bottom: 1px solid #e6ebf1;
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .hero-img {
+            flex: 1;
+            text-align: right;
+        }
+
+        .hero-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(10, 37, 64, 0.1);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            margin-bottom: 50px;
+            font-size: 18px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            border: 1px solid #e6ebf1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            color: var(--accent-orange);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        /* Segments Section */
+        .segments {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 80px 0;
+        }
+
+        .segments .section-title, .segments .section-subtitle {
+            color: var(--white);
+            text-align: center;
+        }
+
+        .segments-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .segment-card {
+            background-color: var(--secondary-blue);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .segment-card h3 {
+            color: var(--accent-orange);
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            text-align: center;
+            background-color: var(--light-bg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #06182c;
+            color: #a0aec0;
+            padding: 50px 0 20px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .footer-links h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-orange);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links, .nav-actions {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-img {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .segments-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header / Navbar -->
+<header>
+    <div class="container">
+        <nav aria-label="Navegación principal">
+            <a href="#" class="logo" aria-label="Volver al inicio de AI-ToDu">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="3" width="18" height="18" rx="4" fill="#0A2540"/>
+                    <path d="M8 12L11 15L16 9" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                AI-<span>ToDu</span>
+            </a>
+
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#beneficios" role="menuitem">Beneficios</a></li>
+                <li role="none"><a href="#soluciones" role="menuitem">Soluciones</a></li>
+                <li role="none"><a href="#nosotros" role="menuitem">Nosotros</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#" class="btn btn-outline" aria-label="Iniciar Sesión en el sistema">Iniciar Sesión</a>
+                <a href="#" class="btn btn-primary" aria-label="Registrarse gratis">Prueba Gratis</a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Abrir menú móvil" aria-expanded="false" onclick="toggleMenu()">
+                ☰
+            </button>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>El sistema nervioso central de tu logística.</h1>
+                <p>Centraliza tu inventario, ventas, despacho y facturación en una sola plataforma SaaS. Diseñada para operarios, construida para MYPES que buscan crecer sin complicaciones.</p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="#soluciones" class="btn btn-primary" aria-label="Ver cómo funciona AI-ToDu">Descubre Cómo</a>
+                    <a href="#" class="btn btn-outline" aria-label="Agendar una demostración">Agendar Demo</a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="https://placehold.co/600x400/0A2540/FFFFFF?text=Dashboard+AI-ToDu+Preview" alt="Captura de pantalla del Dashboard de Inventario y Ventas de AI-ToDu" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / Value Proposition -->
+    <section id="beneficios" class="features container">
+        <h2 class="section-title">Innovación Adaptable para tu Negocio</h2>
+        <p class="section-subtitle">Olvida los cuadernos perdidos y los Excel rotos. AI-ToDu democratiza la tecnología empresarial.</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon" aria-hidden="true">📦</span>
+                <h3>Unificación Total</h3>
+                <p>Conecta en tiempo real tus flujos de inventario (ingresos/salidas), ventas de mostrador y facturación electrónica SUNAT en un solo ecosistema.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon" aria-hidden="true">📈</span>
+                <h3>Balance Inteligente</h3>
+                <p>Cruza los ingresos de facturación con tus costos de adquisición. Descubre al instante tu margen de ganancia real y rentabilidad neta.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon" aria-hidden="true">🔔</span>
+                <h3>Monitoreo y Alertas</h3>
+                <p>Recibe notificaciones automáticas de stock mínimo. Prevén quiebres de inventario y mantén tu producción siempre activa.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon" aria-hidden="true">🔒</span>
+                <h3>Seguridad y Roles</h3>
+                <p>Plataforma robusta con permisos granulares (Administrador, Almacenero, Vendedor). Protege tu información financiera y delega con confianza.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Segments Section -->
+    <section id="soluciones" class="segments">
+        <div class="container">
+            <h2 class="section-title">Hecho para quienes mueven la economía</h2>
+            <p class="section-subtitle">Adaptamos flujos complejos en interfaces simples para operarios sin experiencia técnica.</p>
+
+            <div class="segments-grid">
+                <div class="segment-card">
+                    <h3>Para Dueños y Gerentes</h3>
+                    <p><strong>El Dolor:</strong> Pérdida de dinero por descontrol de mercadería y falta de visibilidad del estado real del negocio.</p>
+                    <p><strong>La Solución:</strong> Un Dashboard directivo accesible desde tu celular. Visualiza reportes de ingresos, rentabilidad y alertas de faltantes mientras tomas decisiones estratégicas desde cualquier lugar.</p>
+                </div>
+                <div class="segment-card">
+                    <h3>Para Operarios de Almacén</h3>
+                    <p><strong>El Dolor:</strong> Estrés por registro doble en papel y sistemas difíciles de aprender que retrasan el despacho.</p>
+                    <p><strong>La Solución:</strong> Interfaces rápidas y botoneras grandes. Búsqueda ágil de productos, registro de mermas en 3 clics y validaciones automáticas que previenen errores humanos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="section-title">¿Listo para modernizar tu cadena de suministro?</h2>
+            <p class="section-subtitle">Únete a las MYPES que ya optimizaron su rentabilidad con IA-INNOVATION.</p>
+            <a href="#" class="btn btn-primary" aria-label="Iniciar registro en la plataforma">Crea tu cuenta ahora</a>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">AI-ToDu</div>
+                <p>Desarrollado por IA-INNOVATION. Democratizando el acceso a la tecnología empresarial para las MYPES latinoamericanas.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Producto</h4>
+                <ul>
+                    <li><a href="#">Características</a></li>
+                    <li><a href="#">Precios y Planes</a></li>
+                    <li><a href="#">Guía de Usuario</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal & Ética</h4>
+                <ul>
+                    <li><a href="/terminos-condiciones" aria-label="Leer nuestros Términos y Condiciones">Términos y Condiciones</a></li>
+                    <li><a href="/privacidad" aria-label="Leer Política de Privacidad">Política de Privacidad</a></li>
+                    <li><a href="/etica" aria-label="Código de Ética Profesional">Código de Ética</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 IA-INNOVATION (Proyecto Académico). Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Script Unificado -->
+<script>
+    function toggleMenu() {
+        const btn = document.querySelector('.mobile-menu-btn');
+        const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+        btn.setAttribute('aria-expanded', !expanded);
+
+        alert('Menú responsivo en desarrollo para la entrega final.');
+    }
+</script>
+</body>
+</html>
