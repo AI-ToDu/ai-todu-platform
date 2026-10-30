@@ -70,5 +70,12 @@
   "academic": "Prototipo académico · 2026",
   "footerNote": "Diseñado para aprender. Demostrado con datos ficticios.",
   "legalText": "Este prototipo se utiliza para evaluación universitaria. Usa solo datos ficticios. Los registros se almacenan en tu navegador o en el servidor local de demo. No se realizan pagos reales ni se emiten comprobantes fiscales. Los registros del navegador se eliminan al borrar los datos del sitio. La interfaz no es un servicio de producción ni garantiza identidad o seguridad de producción. Los enlaces a GitHub abren servicios externos con sus propios términos. Esta página no envía mensajes de contacto ni recopila analítica.",
-  "close": "Cerrar"
+  "close": "Cerrar",
+  "navLabel": "Navegación principal",
+  "homeLabel": "Inicio de AI-ToDu",
+  "evidenceKicker": "DESDE EL PROTOTIPO FUNCIONAL",
+  "evidenceTitle": "Conoce la operación detrás de los números.",
+  "evidenceText": "Captura real del espacio de trabajo después de probar una recepción, venta y entrega local. Todas las cifras provienen de transacciones ficticias de la demo.",
+  "evidenceAlt": "Aplicación Angular real con indicadores derivados del recorrido de prueba local",
+  "evidenceCaption": "Prototipo local · interfaz en inglés · datos ficticios · no representa resultados de un negocio."
 }
