@@ -29,9 +29,9 @@ function updateLinks() {
         ? "http://127.0.0.1:8850/"
         : "https://ai-todu.github.io/ai-todu-webapp/",
     );
-    if (local) url.searchParams.set("api", "http");
+    url.searchParams.set("api", local ? "http" : "server");
     url.searchParams.set("lang", lang);
-    if (a.dataset.app === "warehouse")
+    if (local && a.dataset.app === "warehouse")
       url.searchParams.set("role", "warehouse");
     url.hash = "/login";
     a.href = url.href;
