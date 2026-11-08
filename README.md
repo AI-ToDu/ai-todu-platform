@@ -60,7 +60,7 @@ En desarrollo local el enlace puede sugerir un perfil de demostración. En la pu
 
 4. Abre [http://127.0.0.1:8851](http://127.0.0.1:8851). Para recorrer el CTA local, ejecuta también `npm run demo` en el frontend, que utiliza el puerto 8850.
 
-En hosting público, el CTA apunta a la URL del workspace en Pages. La rama predeterminada histórica de la landing es `develop`; revisar integración y configuración de Pages antes de publicar la revisión.
+En hosting público, el CTA apunta a la URL del workspace en Pages. La rama predeterminada histórica de la landing es `develop`, publicada mediante GitHub Actions y versionada como `v1.1.0`. Las correcciones se revisan en ramas `fix/...`.
 
 ## ✅ Verificación y Alcance
 
@@ -70,14 +70,16 @@ Siguen pendientes un formulario B2B con persistencia, testimonios auténticos y 
 
 ---
 
+La documentación de servicios del backend está en [Swagger UI](https://ai-todu-api-av2.onrender.com/swagger-ui.html) y en el informe. El servidor implementa el Transactional Outbox Pattern; la landing enlaza ese producto y no consume ni publica eventos de dominio.
+
 ## 🔗 Ecosistema del Proyecto
 
 * **[Backend REST](https://github.com/AI-ToDu/ai-todu-api):** Java, PostgreSQL, OpenAPI y Outbox.
 
-* **[Landing Page](https://github.com/AI-ToDu/ai-todu-platform/tree/fix/tb1-readiness):** presentación del producto y acceso a la demo.
-* **[Frontend](https://github.com/AI-ToDu/ai-todu-webapp/tree/fix/tb1-readiness):** espacio de trabajo Angular.
-* **[Fake REST API](https://github.com/AI-ToDu/ai-todu-fake-api/tree/fix/tb1-readiness):** motor canónico de demostración y contrato OpenAPI.
-* **[Informe](https://github.com/AI-ToDu/ai-todu-report/tree/fix/tb1-readiness):** requisitos, arquitectura, diseño de datos y evidencias.
+* **[Landing Page](https://github.com/AI-ToDu/ai-todu-platform/tree/develop):** presentación del producto y acceso a la demo.
+* **[Frontend](https://github.com/AI-ToDu/ai-todu-webapp/tree/main):** espacio de trabajo Angular.
+* **[Fake REST API](https://github.com/AI-ToDu/ai-todu-fake-api/tree/main):** motor canónico de demostración y contrato OpenAPI.
+* **[Informe](https://github.com/AI-ToDu/ai-todu-report/tree/main):** requisitos, arquitectura, diseño de datos y evidencias.
 
 ---
 
