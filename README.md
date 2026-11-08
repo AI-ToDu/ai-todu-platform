@@ -9,7 +9,7 @@
 
 ### 🌍 [Ver Demo en Vivo (GitHub Pages)](https://ai-todu.github.io/ai-todu-platform/)
 
-> **Nota para evaluación:** sitio académico responsive y bilingüe, con inglés predeterminado y español latinoamericano. La revisión se encuentra en `fix/tb1-readiness`; contrastar la versión pública con la rama revisada. La vista del hero está identificada como ilustrativa y no acredita capacidades productivas de IA, pago o emisión fiscal.
+> **Nota para evaluación:** sitio académico responsive y bilingüe, con inglés predeterminado y español latinoamericano. AV2 conecta la aplicación a [Java/Spring Boot y PostgreSQL](https://github.com/AI-ToDu/ai-todu-api); esta landing conserva su naturaleza estática. La vista del hero está identificada como ilustrativa y no acredita capacidades productivas de IA, pago o emisión fiscal.
 
 ---
 
@@ -20,10 +20,10 @@ La landing utiliza **HTML, CSS y JavaScript**, sin paquetes de ejecución. Actú
 * **Propuesta y funcionalidades:** explicación del problema y del alcance de la demo.
 * **Recorrido operativo:** recepción, inventario, venta y entrega.
 * **Segmentos y equipo:** presentación del público objetivo y de IA-INNOVATION.
-* **CTA:** acceso al workspace, conservando idioma y perfil demo solicitado.
+* **CTA:** acceso al servidor de la webapp, conservando idioma. El rol procede de la cuenta autenticada.
 * **Contacto y recursos:** canal real del proyecto en GitHub y términos/privacidad académicos.
 
-El perfil enviado por el enlace es una sugerencia de entrada; una sesión ya autenticada conserva sus propias reglas y rol.
+En desarrollo local el enlace puede sugerir un perfil de demostración. En la publicación pública usa el modo servidor y los permisos reales de la cuenta.
 
 ---
 
@@ -42,7 +42,7 @@ El perfil enviado por el enlace es una sugerencia de entrada; una sesión ya aut
 1. Clona la rama de revisión:
 
    ```sh
-   git clone --branch fix/tb1-readiness https://github.com/AI-ToDu/ai-todu-platform.git
+   git clone --branch develop https://github.com/AI-ToDu/ai-todu-platform.git
    cd ai-todu-platform
    ```
 
@@ -71,6 +71,8 @@ Siguen pendientes un formulario B2B con persistencia, testimonios auténticos y 
 ---
 
 ## 🔗 Ecosistema del Proyecto
+
+* **[Backend REST](https://github.com/AI-ToDu/ai-todu-api):** Java, PostgreSQL, OpenAPI y Outbox.
 
 * **[Landing Page](https://github.com/AI-ToDu/ai-todu-platform/tree/fix/tb1-readiness):** presentación del producto y acceso a la demo.
 * **[Frontend](https://github.com/AI-ToDu/ai-todu-webapp/tree/fix/tb1-readiness):** espacio de trabajo Angular.

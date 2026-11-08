@@ -256,7 +256,7 @@
               <ul>
                 <li data-i18n="owner1">Transaction-based indicators</li>
                 <li data-i18n="owner2">Sales and returns history</li>
-                <li data-i18n="owner3">Role-based demo access</li>
+                <li data-i18n="owner3">Access controlled by account role</li>
               </ul>
               <a
                 class="button outline"
@@ -308,9 +308,7 @@
               research, implementation and feedback.
             </p>
             <p class="muted" data-i18n="scope">
-              This version uses a Fake REST API. Production services, commercial
-              subscriptions and fiscal integration are future work; they are not
-              available in this demo.
+              This version connects to a Java API with PostgreSQL. Workspaces share records with authorized users. Commercial subscriptions, AI prediction and fiscal integration remain future work.
             </p>
             <a
               class="text-link"
@@ -384,14 +382,7 @@
       <div class="legal-content">
         <h2 id="legal-title" data-i18n="legal">Terms & privacy</h2>
         <p data-i18n="legalText">
-          This prototype is for university evaluation. Use fictional data only.
-          Demo records are stored in your browser or the local demo server. No
-          real payments or fiscal documents are issued. Browser records can be
-          erased by clearing site data. The interface is not a production
-          service and does not provide production identity or security
-          guarantees. External GitHub links open third-party services under
-          their own terms. This page does not submit contact messages or collect
-          analytics.
+          This university prototype uses fictional data. In server mode, workspace records are stored in PostgreSQL and accessible to authorized workspace users. A session token stays in your browser until sign-out or expiry. Optional demo mode stores data locally. No real payments or fiscal documents are issued. The weather panel uses fixed central-Lima coordinates with Open-Meteo. This landing does not submit contact messages or collect analytics. External links follow their own terms.
         </p>
         <button class="button" id="legal-close" data-i18n="close">Close</button>
       </div>
