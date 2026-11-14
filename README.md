@@ -66,7 +66,9 @@ En hosting público, el CTA apunta a la URL del workspace en Pages. La rama pred
 
 Revisar escritorio/móvil, ambos idiomas, menú, foco, Escape, destino del CTA y términos. El sitio no incorpora analytics, testimonios ficticios ni checkout de suscripción.
 
-Siguen pendientes un formulario B2B con persistencia, testimonios auténticos y evidencias audiovisuales del producto/exposición. El contacto actual utiliza el canal público del proyecto en GitHub.
+La sección About-the-Product incorpora el [video académico AV2 de 2:21](https://youtu.be/nvsYXk91k4c), con escenas de recepción, venta y despacho y opiniones auténticas de ambos perfiles tras recorridos guiados. El reproductor no inicia automáticamente y conserva un enlace directo a YouTube. Las grabaciones no acreditan éxito sin ayuda ni mejoras empresariales medidas.
+
+Siguen pendientes un formulario B2B con persistencia y la grabación About-the-Team. El contacto actual utiliza el canal público del proyecto en GitHub.
 
 ---
 
