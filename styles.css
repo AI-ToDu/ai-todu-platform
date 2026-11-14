@@ -796,6 +796,15 @@ dialog::backdrop {
     grid-column: auto;
   }
 }
+.product-video-player {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 12px;
+  background: #102c37;
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
